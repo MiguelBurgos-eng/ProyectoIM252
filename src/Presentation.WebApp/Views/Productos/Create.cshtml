@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Productos > Crear";
+}
+
+@model Domain.Producto
+
+<h1>
+    Insertar:
+</h1>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    Descripcion: <input asp-for="Descripcion" required />
+    <br />
+    Precio: <input asp-for="Precio" required />
+    <br />
+    Cantidad: <input asp-for="Cantidad" required />
+    <br />
+    Foto: <input asp-for="Foto" type="file" name="file" accept=".jpg,.png,.jpeg,.gif" required />
+    <br />
+
+    <button>Insertar</button>
+</form>
+
+<a asp-action="Index">Cancelar</a>

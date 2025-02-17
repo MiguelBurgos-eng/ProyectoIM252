@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Productos > Editar";
+}
+
+@model Domain.Producto
+
+<h1>
+    Actualizar:
+</h1>
+
+<form asp-action="Edit">
+    <input asp-for="Id" type="hidden"  required />
+
+    Descripcion: <input asp-for="Descripcion" required />
+    <br />
+    Precio: <input asp-for="Precio" required />
+    <br />
+    Cantidad: <input asp-for="Cantidad" required />
+    <br />
+    Foto: <input asp-for="Foto" type="file" name="file" accept=".jpg,.png,.jpeg,.gif" required />
+    <br />
+    <button>Actualizar</button>
+</form>
+
+<a asp-action="Index">Cancelar</a>

@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+@model List<Domain.Cliente>
+
+<a asp-action="Create">Crear Nuevo</a>
+
+<h1>
+    Mostrar:
+</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+        <th>Correo</th>
+        <th></th>
+    </tr>
+    @foreach (var e in Model)
+    {
+        <tr>
+            <td>@e.Id</td>
+            <th>@e.Nombre</th>
+            <td>@e.Direccion</td>
+            <td>@e.Telefono</td>
+            <td>@e.Correo</td>          
+            <td>
+                <a asp-action="Details" asp-route-id="@e.Id">Detalles</a> |
+                <a asp-action="Edit" asp-route-id="@e.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@e.Id">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>
+

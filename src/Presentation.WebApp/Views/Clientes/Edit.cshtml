@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Clientes > Editar";
+}
+
+@model Domain.Cliente
+
+<h1>
+    Actualizar:
+</h1>
+
+<form asp-action="Edit">
+    <input asp-for="Id" type="hidden" required />
+
+    Nombre: <input asp-for="Nombre" required />
+    <br />
+    Direccion: <input asp-for="Direccion" required />
+    <br />
+    Telefono: <input asp-for="Telefono" required />
+    <br />
+    Correo: <input asp-for="Correo" required />
+    <br />
+    <button>Actualizar</button>
+</form>
+
+<a asp-action="Index">Cancelar</a>

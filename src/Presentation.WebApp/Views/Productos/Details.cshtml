@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Productos > Detalle";
+}
+
+@model Domain.Producto
+
+<dl>
+    <dt>Id</dt>
+    <dd>@Model.Id</dd>
+
+    <dt>Descripcion</dt>
+    <dd>@Model.Descripcion</dd>
+
+    <dt>Precio</dt>
+    <dd>@Model.Precio</dd>
+  
+    <dt>Cantidad</dt>
+    <dd>@Model.Cantidad</dd>  
+
+    <dt>Foto</dt>
+    <dd><img src="@Model.Foto" /></dd>
+  
+</dl>
+<a asp-action="Index" class="btn btn-danger mt-3">Regresar</a>

@@ -1,0 +1,11 @@
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\Workspace\ProyectoIM252\src\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\Workspace\ProyectoIM252\src\Domain\bin\Debug\net9.0\Domain.dll
+D:\Workspace\ProyectoIM252\src\Domain\bin\Debug\net9.0\Domain.pdb
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\Domain.dll
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\Domain.pdb
+D:\Workspace\ProyectoIM252\src\Domain\obj\Debug\net9.0\ref\Domain.dll
