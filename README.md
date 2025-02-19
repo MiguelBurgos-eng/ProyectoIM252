@@ -1,35 +1,26 @@
-
 # Proyecto IM 25-2
 Proyecto de la materia de Implantación y Mantenimiento de Sistemas
 
-
 ## Data
-CREATE TABLE [IM252Cliente](
-	[Id] [uniqueidentifier] NOT NULL,
-	[Nombre] [nvarchar](256) NOT NULL,
-	[Direccion] [nvarchar](512) NULL,
-	[Telefono] [nvarchar](128) NOT NULL,
-	[Correo] [nvarchar](256) NOT NULL,
+```sql
+CREATE TABLE IM252Cliente NOT NULL,
+    [Direccion] nvarchar NULL,
+    [Telefono] nvarchar NOT NULL,
+    [Correo] nvarchar NOT NULL,
     CONSTRAINT PK_IM252Cliente PRIMARY KEY ([Id])
 );
-CREATE TABLE [IM252Producto](
-	[Id] [uniqueidentifier] NOT NULL,
-	[Descripcion] [nvarchar](128) NULL,
-	[Precio] [smallmoney] NOT NULL,
-	[Cantidad] [tinyint] NOT NULL DEFAULT(0),
-	[Foto] [nvarchar](max) NULL,
+
+CREATE TABLE IM252Producto NULL,
+    [Precio] [smallmoney] NOT NULL,
+    [Cantidad] [tinyint] NOT NULL DEFAULT(0),
+    [Foto] nvarchar NULL,
     CONSTRAINT PK_IM252Producto PRIMARY KEY ([Id])
 );
-CREATE TABLE [IM252ClientesVentas] (
-    [Id] [uniqueidentifier] NOT NULL,
-    [ClienteId] [uniqueidentifier] NOT NULL,
-    [ProductoId] [uniqueidentifier] NOT NULL,
-    [Fecha] [smalldatetime] NOT NULL,
-    CONSTRAINT PK_IM252ClientesVentas PRIMARY KEY ([Id]),
+
+CREATE TABLE IM252ClientesVentas,
     CONSTRAINT FK_IM252ClientesVentas_IM252Cliente FOREIGN KEY ([ClienteId]) REFERENCES [IM252Cliente] ([Id]),
     CONSTRAINT FK_IM252ClientesVentas_IM252Producto FOREIGN KEY ([ProductoId]) REFERENCES [IM252Producto] ([Id])
 );
-
 
 
 ## Structure
