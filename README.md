@@ -24,7 +24,7 @@ CREATE TABLE IM252ClientesVentas,
 
 
 ## Structure
-
+```tree
 └───src
     ├───Application
     ├───Domain
@@ -38,6 +38,7 @@ CREATE TABLE IM252ClientesVentas,
             ├───Empleados
             ├───Home
             └───Shared
+
 
 ## Comandos
 
