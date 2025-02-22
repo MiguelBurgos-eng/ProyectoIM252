@@ -13,3 +13,4 @@ D:\Workspace\ProyectoIM252\src\Application\obj\Debug\net9.0\Application.dll
 D:\Workspace\ProyectoIM252\src\Application\obj\Debug\net9.0\refint\Application.dll
 D:\Workspace\ProyectoIM252\src\Application\obj\Debug\net9.0\Application.pdb
 D:\Workspace\ProyectoIM252\src\Application\obj\Debug\net9.0\ref\Application.dll
+d:\Workspace\ProyectoIM252\src\Application\obj\Debug\net9.0\Application.sourcelink.json

@@ -15,3 +15,4 @@ D:\Workspace\ProyectoIM252\src\Infrastructure\obj\Debug\net9.0\Infrastructure.dl
 D:\Workspace\ProyectoIM252\src\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 D:\Workspace\ProyectoIM252\src\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 D:\Workspace\ProyectoIM252\src\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+d:\Workspace\ProyectoIM252\src\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json

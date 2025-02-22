@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj": {}
+    "D:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "d:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj": {
+    "D:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "d:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Workspace\\ProyectoIM252\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "d:\\Workspace\\ProyectoIM252\\src\\Domain\\obj\\",
+        "outputPath": "D:\\Workspace\\ProyectoIM252\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config"
