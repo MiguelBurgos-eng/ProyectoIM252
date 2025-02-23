@@ -85,11 +85,11 @@ public class ProductosDbContext
     {
         var con = new SqlConnection(_connectionString);
         var cmd = new SqlCommand("INSERT INTO [IM252Producto] ([Id],[Descripcion],[Precio],[Cantidad],[Foto]) VALUES (@id,@descripcion,@precio,@cantidad,@foto)", con);
-        cmd.Parameters.Add("id", SqlDbType.UniqueIdentifier).Value = data.Id;
-        cmd.Parameters.Add("descripcion", SqlDbType.NVarChar, 256).Value = data.Descripcion;
-        cmd.Parameters.Add("precio", SqlDbType.SmallMoney).Value = data.Precio;
-        cmd.Parameters.Add("cantidad", SqlDbType.TinyInt).Value = data.Cantidad;
-        cmd.Parameters.Add("foto", SqlDbType.NVarChar).Value = (object)data.Foto ?? DBNull.Value;
+        cmd.Parameters.Add("@id", SqlDbType.UniqueIdentifier).Value = data.Id;
+        cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar, 256).Value = data.Descripcion;
+        cmd.Parameters.Add("@precio", SqlDbType.SmallMoney).Value = data.Precio;
+        cmd.Parameters.Add("@cantidad", SqlDbType.TinyInt).Value = data.Cantidad;
+        cmd.Parameters.Add("@foto", SqlDbType.NVarChar).Value = (object)data.Foto ?? DBNull.Value;
 
         /*
         CREATE TABLE [IM252Producto](
@@ -122,11 +122,11 @@ public class ProductosDbContext
     {
         var con = new SqlConnection(_connectionString);
         var cmd = new SqlCommand("UPDATE [IM252Producto] SET [Descripcion] = @descripcion,[Precio] = @precio,[Cantidad] = @cantidad,[Foto]=@foto WHERE [Id] = @id", con);
-        cmd.Parameters.Add("id", SqlDbType.UniqueIdentifier).Value = data.Id;
-        cmd.Parameters.Add("descripcion", SqlDbType.NVarChar, 256).Value = data.Descripcion;
-        cmd.Parameters.Add("precio", SqlDbType.SmallMoney).Value = data.Precio;
-        cmd.Parameters.Add("cantidad", SqlDbType.TinyInt).Value = data.Cantidad;
-        cmd.Parameters.Add("Foto", SqlDbType.NVarChar).Value = (object)data.Foto ?? DBNull.Value;
+        cmd.Parameters.Add("@id", SqlDbType.UniqueIdentifier).Value = data.Id;
+        cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar, 256).Value = data.Descripcion;
+        cmd.Parameters.Add("@precio", SqlDbType.SmallMoney).Value = data.Precio;
+        cmd.Parameters.Add("@cantidad", SqlDbType.TinyInt).Value = data.Cantidad;
+        cmd.Parameters.Add("@foto", SqlDbType.NVarChar).Value = (object)data.Foto ?? DBNull.Value;
         try
         {
             con.Open();

@@ -88,7 +88,7 @@ CREATE TABLE [IM252Producto](
                         Descripcion = (string)dr["Descripcion"],
                         Precio = (decimal)dr["Precio"],
                         Cantidad = (byte)dr["Cantidad"],
-                        Foto = (string)dr["Foto"],
+                        Foto = dr["Foto"] != DBNull.Value ? (string)dr["Foto"] : null,
                     }
                 };
                 data.Add(Venta);
@@ -143,7 +143,7 @@ CREATE TABLE [IM252Producto](
                     Descripcion = (string)dr["Descripcion"],
                     Precio = (decimal)dr["Precio"],
                     Cantidad = (byte)dr["Cantidad"],
-                    Foto = (string)dr["Foto"],
+                    Foto = dr["Foto"] != DBNull.Value ? (string)dr["Foto"] : null,
                 };
             }
             return data;
@@ -185,10 +185,10 @@ CREATE TABLE [IM252Producto](
     {
         var con = new SqlConnection(_connectionString);
         var cmd = new SqlCommand("UPDATE [IM252Venta] SET [ClienteId] = @clienteId, [ProductoId] = @productoId, [Fecha] = @fecha WHERE [Id] = @id", con);
-        cmd.Parameters.Add("id", SqlDbType.UniqueIdentifier).Value = data.Id;
-        cmd.Parameters.Add("clienteId", SqlDbType.UniqueIdentifier).Value = data.Cliente;
-        cmd.Parameters.Add("productoId", SqlDbType.UniqueIdentifier).Value = data.Producto;
-        cmd.Parameters.Add("fecha", SqlDbType.SmallDateTime).Value = data.Fecha;
+        cmd.Parameters.Add("@id", SqlDbType.UniqueIdentifier).Value = data.Id;
+        cmd.Parameters.Add("@clienteId", SqlDbType.UniqueIdentifier).Value = data.ClienteId;
+        cmd.Parameters.Add("@productoId", SqlDbType.UniqueIdentifier).Value = data.ProductoId;
+        cmd.Parameters.Add("@fecha", SqlDbType.SmallDateTime).Value = data.Fecha;
         try
         {
             con.Open();
