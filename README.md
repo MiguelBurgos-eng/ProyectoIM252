@@ -47,7 +47,7 @@ CREATE TABLE IM252Producto (
     CONSTRAINT PK_IM252Producto PRIMARY KEY ([Id])
 );
 
-CREATE TABLE IM252ClientesVentas (
+CREATE TABLE IM252Venta (
     [ClienteId] INT NOT NULL,
     [ProductoId] INT NOT NULL,
     CONSTRAINT FK_IM252ClientesVentas_IM252Cliente FOREIGN KEY ([ClienteId]) REFERENCES [IM252Cliente] ([Id]),
@@ -67,7 +67,7 @@ rm ./src/Domain/Class1.cs
 mkdir ./src/Domain/Entities
 echo 'namespace Domain;' > ./src/Domain/Entities/Cliente.cs
 echo 'namespace Domain;' > ./src/Domain/Entities/Producto.cs
-echo 'namespace Domain;' > ./src/Domain/Entities/ClientesVentas.cs
+echo 'namespace Domain;' > ./src/Domain/Entities/Ventas.cs
 ```
 
 ### 🏗️ Configuración de la Aplicación
@@ -86,7 +86,7 @@ rm ./src/Infrastructure/Class1.cs
 mkdir ./src/Infrastructure/Data
 echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/ClientesDbContext.cs
 echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/ProductosDbContext.cs
-echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/ClientesVentasDbContext.cs
+echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/VentasDbContext.cs
 dotnet add ./src/Infrastructure package Microsoft.Data.SqlClient
 dotnet add ./src/Infrastructure reference ./src/Application
 ```
