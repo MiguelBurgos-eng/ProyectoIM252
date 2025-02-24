@@ -485,9 +485,12 @@ CREATE TABLE IM252ClientesVentas (
 dotnet new classlib -o ./src/Domain
 rm ./src/Domain/Class1.cs
 mkdir ./src/Domain/Entities
+touch ./src/Domain/Entities/Cliente.cs
+touch ./src/Domain/Entities/Producto.cs
+touch ./src/Domain/Entities/Venta.cs
 echo 'namespace Domain;' > ./src/Domain/Entities/Cliente.cs
 echo 'namespace Domain;' > ./src/Domain/Entities/Producto.cs
-echo 'namespace Domain;' > ./src/Domain/Entities/ClientesVentas.cs
+echo 'namespace Domain;' > ./src/Domain/Entities/Venta.cs
 ```
 
 ### 🏗️ Configuración de la Aplicación
@@ -496,6 +499,9 @@ echo 'namespace Domain;' > ./src/Domain/Entities/ClientesVentas.cs
 dotnet new classlib -o ./src/Application
 rm ./src/Application/Class1.cs
 dotnet add ./src/Application reference ./src/Domain
+mkdir ./src/Application/Services
+touch ./src/Application/Services/FileConverter.cs
+echo 'namespace Application.Services;' > ./src/Application/Services/FileConverter.cs
 ```
 
 ### 🏗️ Configuración de la Infraestructura
@@ -504,9 +510,12 @@ dotnet add ./src/Application reference ./src/Domain
 dotnet new classlib -o ./src/Infrastructure
 rm ./src/Infrastructure/Class1.cs
 mkdir ./src/Infrastructure/Data
-echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/ClientesDbContext.cs
-echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/ProductosDbContext.cs
-echo 'namespace Infrastructure;' > ./src/Infrastructure/Data/ClientesVentasDbContext.cs
+touch ./src/Infrastructure/Data/ClientesDbContext.cs
+touch ./src/Infrastructure/Data/ProductosDbContext.cs
+touch ./src/Infrastructure/Data/VentasDbContext.cs
+echo 'namespace Infrastructure.Data;' > ./src/Infrastructure/Data/ClientesDbContext.cs
+echo 'namespace Infrastructure.Data;' > ./src/Infrastructure/Data/ProductosDbContext.cs
+echo 'namespace Infrastructure.Data;' > ./src/Infrastructure/Data/VentasDbContext.cs
 dotnet add ./src/Infrastructure package Microsoft.Data.SqlClient
 dotnet add ./src/Infrastructure reference ./src/Application
 ```
@@ -515,8 +524,20 @@ dotnet add ./src/Infrastructure reference ./src/Application
 
 ```sh
 dotnet new mvc -o ./src/Presentation.WebApp
-mkdir ./src/Presentation.WebApp/Views/Clientes
+mkdir ./src/Presentation.WebApp/Controllers
+touch ./src/Presentation.WebApp/Controllers/ClientesController.cs
+touch ./src/Presentation.WebApp/Controllers/HomeController.cs
+touch ./src/Presentation.WebApp/Controllers/ProductosController.cs
+touch ./src/Presentation.WebApp/Controllers/VentasController.cs
 echo 'namespace Presentation.WebApp.Controllers;' > ./src/Presentation.WebApp/Controllers/ClientesController.cs
+echo 'namespace Presentation.WebApp.Controllers;' > ./src/Presentation.WebApp/Controllers/HomeController.cs
+echo 'namespace Presentation.WebApp.Controllers;' > ./src/Presentation.WebApp/Controllers/ProductosController.cs
+echo 'namespace Presentation.WebApp.Controllers;' > ./src/Presentation.WebApp/Controllers/VentasController.cs
+mkdir -p ./src/Presentation.WebApp/Views/Clientes
+touch ./src/Presentation.WebApp/Views/Clientes/Index.cshtml
+touch ./src/Presentation.WebApp/Views/Clientes/Create.cshtml
+touch ./src/Presentation.WebApp/Views/Clientes/Details.cshtml
+touch ./src/Presentation.WebApp/Views/Clientes/Edit.cshtml
 echo '@{ ViewData["Title"] = "Clientes"; }' >  ./src/Presentation.WebApp/Views/Clientes/Index.cshtml
 echo '@{ ViewData["Title"] = "Clientes > Crear"; }' >  ./src/Presentation.WebApp/Views/Clientes/Create.cshtml
 echo '@{ ViewData["Title"] = "Clientes > Detalle"; }' >  ./src/Presentation.WebApp/Views/Clientes/Details.cshtml
@@ -528,9 +549,6 @@ echo '@{ ViewData["Title"] = "Clientes > Editar"; }' >  ./src/Presentation.WebAp
 ```sh
 dotnet add ./src/Presentation.WebApp reference ./src/Application
 dotnet add ./src/Presentation.WebApp reference ./src/Infrastructure
-```
-
----
 
 ## 📝 Notas
 
